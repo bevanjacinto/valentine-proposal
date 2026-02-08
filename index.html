@@ -19,8 +19,8 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(135deg, #ffeef8 0%, #ffe0f0 25%, #ffd4e8 50%, #ffb3d9 100%);
-            overflow: hidden;
             position: relative;
+            padding: 20px;
         }
 
         /* Floating hearts background */
@@ -68,7 +68,15 @@
             box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
             border: 2px solid rgba(255, 255, 255, 0.8);
             max-width: 600px;
+            width: 100%;
             animation: slideIn 0.8s ease-out;
+            margin: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+            }
         }
 
         @keyframes slideIn {
@@ -89,6 +97,12 @@
             margin-bottom: 40px;
             text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2);
             animation: pulse 2s ease-in-out infinite;
+        }
+
+        @media (max-width: 768px) {
+            .question {
+                font-size: 36px;
+            }
         }
 
         @keyframes pulse {
@@ -251,8 +265,17 @@
         .custom-gif video {
             width: 100%;
             max-width: 400px;
+            max-height: 400px;
             border-radius: 20px;
             display: block;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .custom-gif video {
+                max-width: 100%;
+                max-height: 300px;
+            }
         }
 
         @keyframes fadeInScale {
